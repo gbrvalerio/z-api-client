@@ -1,5 +1,6 @@
 import { ZAPIPostRequest, ZAPIPutRequest, ZAPIRequestParams, ZAPIResponse } from "endpoints";
 import { ZAPIInstanceClient } from "./clients";
+import ZAPIMessagesClient from "./clients/messages";
 
 export default class ZAPIClient {
 
@@ -7,11 +8,13 @@ export default class ZAPIClient {
   private token: string;
 
   instance: ZAPIInstanceClient;
+  messages: ZAPIMessagesClient;
 
   constructor(instanceId: string, token: string) {
     this.instanceId = instanceId;
     this.token = token;
     this.instance = new ZAPIInstanceClient(this);
+    this.messages = new ZAPIMessagesClient(this);
   }
 
   private makeUrl(endpoint: string): string {
