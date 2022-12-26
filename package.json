@@ -1,0 +1,20 @@
+{
+  "name": "z-api-client",
+  "version": "1.0.0",
+  "author": "Gabriel Valério <gbrvalerio@gmail.com>",
+  "description": "Static typed client for Z-API",
+  "license": "MIT",
+  "repository": "gbrvalerio/z-api-client",
+  "main": "index.js",
+  "scripts": {
+    "build": "tsc",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "zapi",
+    "whatsapp",
+    "z-api",
+    "npm",
+    "package"
+  ]
+}
